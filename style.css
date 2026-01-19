@@ -1,0 +1,128 @@
+/* --- GLOBAL --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.playfair, h1, h2, h3, h4, h5 {
+    font-family: 'Playfair Display', serif;
+}
+
+.text-teal { color: #32e0c4; }
+.text-primary-dark { color: #0f4c75; }
+.bg-light { background-color: #f9fbfd !important; }
+
+.section-padding { padding: 5rem 0; }
+.separator {
+    width: 60px;
+    height: 4px;
+    background-color: #32e0c4;
+    border-radius: 2px;
+}
+
+/* --- HERO SECTION (Custom Override) --- */
+.hero {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+    z-index: 2;
+}
+
+/* Hero Button */
+.btn-custom {
+    background-color: #32e0c4;
+    color: #0f4c75;
+    font-weight: 600;
+    transition: all 0.3s;
+    border: none;
+}
+.btn-custom:hover {
+    background-color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(50, 224, 196, 0.4);
+}
+
+/* --- CARD DESTINATIONS --- */
+.hover-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+}
+.hover-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+
+.card-img-wrapper {
+    height: 220px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.hover-card:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+.btn-link-custom {
+    color: #0f4c75;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+}
+.btn-link-custom:hover {
+    color: #32e0c4;
+    border-color: #32e0c4;
+    text-decoration: none;
+}
+
+/* --- ANIMATIONS --- */
+.animate-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+
+.observer-target {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+@keyframes fadeInUp {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Font for Mobile */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+}
